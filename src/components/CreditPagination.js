@@ -24,18 +24,18 @@ const CreditPagination = ({ setPage, page, yearlyData }) => {
 				Previous
 			</div>
 			<div className="pagination-next" onClick={() => changePage('next')}>
-				Next page
+				Next
 			</div>
 			<ul className="pagination-list">
 				{yearlyData.map((data, index) => (
-					<li key={index}>
+					<li key={index + 1}>
 						<div
 							className={`pagination-link ${
 								page === index ? 'is-current' : ''
 							}`}
 							onClick={() => changePage(index)}
 						>
-							{index}
+							{index + 1}
 						</div>
 					</li>
 				))}

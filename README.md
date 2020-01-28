@@ -1,5 +1,7 @@
 # Credit Information App
-## Created using React.js
+
+### HOW TO USE
+https://wills-credit-app.herokuapp.com/
 
 ### INSTRUCTION
 > Create an interactive interface that allows a user to explore 3 debts (car, credit card, line of credit) over and how they're paid off over the months and years. Create an interface that's engaging and is simple for the user to explore all values. It must do this without being overwhelming or confusing to the user.

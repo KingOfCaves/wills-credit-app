@@ -10,7 +10,10 @@ const CreditApp = () => {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		fetch('/data.json', { method: 'GET', mode: 'no-cors' })
+		fetch('/data.json', {
+			method: 'GET',
+			mode: 'no-cors'
+		})
 			.then((response) => response.json())
 			.then((data) => {
 				const {
@@ -23,6 +26,7 @@ const CreditApp = () => {
 				setDates(dates);
 			})
 			.catch((error) => {
+				alert(error);
 				setError('Something went wrong! The data could not be fetched.');
 			});
 	}, []);
@@ -40,10 +44,7 @@ const CreditApp = () => {
 						data={data}
 						setSelectedCategory={setSelectedCategory}
 					/>
-					<CreditInfo 
-						selectedCategory={selectedCategory} 
-						dates={dates} 
-					/>
+					<CreditInfo selectedCategory={selectedCategory} dates={dates} />
 				</div>
 			)}
 		</div>
